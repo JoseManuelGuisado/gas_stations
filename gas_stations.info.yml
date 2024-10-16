@@ -1,0 +1,8 @@
+name: 'gas_stations'
+type: module
+description: 'Gas station api prices'
+package: gas_stations
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:rest
+  - hal:hal

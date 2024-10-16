@@ -1,0 +1,4 @@
+services:
+  rest_gas_station_client_calls:
+    class: Drupal\gas_stations\RestGasStationClientCalls
+    arguments: ['@http_client', '@config.factory']

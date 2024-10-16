@@ -1,0 +1,16 @@
+# The client setup page.
+gas_stations.client_settings:
+  path: '/gas-stations/gas-stations-client-settings'
+  defaults:
+    _title: 'Connect to gas stations remote api'
+    _form: '\Drupal\gas_stations\Form\RestGasStationClientSettings'
+  requirements:
+    _permission: 'access content'
+
+gas_stations.get_comunidades_autonomas:
+  path: '/gas-stations/get-comunidades-autonomas'
+  defaults:
+    _title: 'Get comunidades autonomas'
+    _controller: '\Drupal\gas_stations\Controller\GasStationClientController::getGasStationCCAA'
+  requirements:
+    _permission: 'access content'
