@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - gas_stations
+id: gas_stations_save_action
+label: 'Save gas_stationss'
+type: gas_stations
+plugin: entity:save_action:gas_stations
+configuration: {  }

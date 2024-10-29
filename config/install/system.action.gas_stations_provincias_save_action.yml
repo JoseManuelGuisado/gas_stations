@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - gas_stations
+id: gas_stations_provincias_save_action
+label: 'Save provinciass'
+type: gas_stations_provincias
+plugin: entity:save_action:gas_stations_provincias
+configuration: {  }

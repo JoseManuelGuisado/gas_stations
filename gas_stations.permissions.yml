@@ -1,0 +1,24 @@
+administer gas_stations:
+  title: 'Administer gas_stationss'
+  restrict access: true
+view gas_stations:
+  title: 'View gas_stations'
+edit gas_stations:
+  title: 'Edit gas_stations'
+delete gas_stations:
+  title: 'Delete gas_stations'
+create gas_stations:
+  title: 'Create gas_stations'
+
+administer gas_stations_comunidades_autonomas:
+  title: 'Administer comunidades_autonomass'
+  restrict access: true
+
+administer gas_stations_provincias types:
+  title: 'Administer provincias types'
+  description: 'Maintain the types of provincias entity.'
+  restrict access: true
+
+administer gas_stations_municipios:
+  title: 'Administer gas_stations_municipioss'
+  restrict access: true

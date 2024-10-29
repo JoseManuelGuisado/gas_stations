@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - gas_stations
+id: gas_stations_provincias_delete_action
+label: 'Delete provinciass'
+type: gas_stations_provincias
+plugin: entity:delete_action:gas_stations_provincias
+configuration: {  }

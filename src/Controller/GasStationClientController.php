@@ -35,7 +35,7 @@ class GasStationClientController extends ControllerBase implements ContainerInje
     public function getGasStationCCAA()
     {
 
-        $a = $this->gasStationClient->getCCAA();
+        $a = $this->gasStationClient->updateMasterData();
 
         dd($a);
 

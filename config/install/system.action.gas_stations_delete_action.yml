@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - gas_stations
+id: gas_stations_delete_action
+label: 'Delete gas_stationss'
+type: gas_stations
+plugin: entity:delete_action:gas_stations
+configuration: {  }

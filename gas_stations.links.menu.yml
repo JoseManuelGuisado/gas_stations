@@ -1,0 +1,47 @@
+entity.gas_stations.settings:
+  title: 'gas_stations'
+  description: 'Configure a gas_stations entity type.'
+  route_name:  entity.gas_stations.settings
+  parent: system.admin_structure
+
+entity.gas_stations.collection:
+  title: 'gas_stationss'
+  description: 'List of gas_stationss.'
+  route_name: entity.gas_stations.collection
+  parent: system.admin_content
+
+entity.gas_stations_comunidades_autonomas.settings:
+  title: 'comunidades_autonomas'
+  description: 'Configure a comunidades_autonomas entity type.'
+  route_name:  entity.gas_stations_comunidades_autonomas.settings
+  parent: system.admin_structure
+
+entity.gas_stations_comunidades_autonomas.collection:
+  title: 'comunidades_autonomass'
+  description: 'List of comunidades_autonomass.'
+  route_name: entity.gas_stations_comunidades_autonomas.collection
+  parent: system.admin_content
+
+entity.gas_stations_provincias_type.collection:
+  title: 'Provincias types'
+  description: 'Manage and CRUD actions on Provincias type.'
+  parent: system.admin_structure
+  route_name: entity.gas_stations_provincias_type.collection
+
+entity.gas_stations_provincias.collection:
+  title: 'Provinciass'
+  description: 'List of provinciass.'
+  route_name: entity.gas_stations_provincias.collection
+  parent: system.admin_content
+
+entity.gas_stations_municipios.settings:
+  title: 'gas_stations_municipios'
+  description: 'Configure a gas_stations_municipios entity type.'
+  route_name:  entity.gas_stations_municipios.settings
+  parent: system.admin_structure
+
+entity.gas_stations_municipios.collection:
+  title: 'gas_stations_municipioss'
+  description: 'List of gas_stations_municipioss.'
+  route_name: entity.gas_stations_municipios.collection
+  parent: system.admin_content

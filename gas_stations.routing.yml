@@ -14,3 +14,26 @@ gas_stations.get_comunidades_autonomas:
     _controller: '\Drupal\gas_stations\Controller\GasStationClientController::getGasStationCCAA'
   requirements:
     _permission: 'access content'
+entity.gas_stations.settings:
+  path: 'admin/structure/gas-stations'
+  defaults:
+    _form: '\Drupal\gas_stations\Form\GasStationsSettingsForm'
+    _title: 'gas_stations'
+  requirements:
+    _permission: 'administer gas_stations'
+
+entity.gas_stations_comunidades_autonomas.settings:
+  path: 'admin/structure/gas-stations-comunidades-autonomas'
+  defaults:
+    _form: '\Drupal\gas_stations\Form\ComunidadesAutonomasSettingsForm'
+    _title: 'comunidades_autonomas'
+  requirements:
+    _permission: 'administer gas_stations_comunidades_autonomas'
+
+entity.gas_stations_municipios.settings:
+  path: 'admin/structure/gas-stations-municipios'
+  defaults:
+    _form: '\Drupal\gas_stations\Form\GasStationsMunicipiosSettingsForm'
+    _title: 'gas_stations_municipios'
+  requirements:
+    _permission: 'administer gas_stations_municipios'

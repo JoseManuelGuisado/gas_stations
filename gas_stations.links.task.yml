@@ -1,0 +1,43 @@
+entity.gas_stations.settings:
+  title: 'Settings'
+  route_name: entity.gas_stations.settings
+  base_route: entity.gas_stations.settings
+entity.gas_stations.collection:
+  title: 'gas_stationss'
+  route_name: entity.gas_stations.collection
+  base_route: system.admin_content
+  weight: 10
+
+entity.gas_stations_comunidades_autonomas.settings:
+  title: 'Settings'
+  route_name: entity.gas_stations_comunidades_autonomas.settings
+  base_route: entity.gas_stations_comunidades_autonomas.settings
+entity.gas_stations_comunidades_autonomas.collection:
+  title: 'comunidades_autonomass'
+  route_name: entity.gas_stations_comunidades_autonomas.collection
+  base_route: system.admin_content
+  weight: 10
+
+entity.gas_stations_provincias.collection:
+  title: 'Provinciass'
+  route_name: entity.gas_stations_provincias.collection
+  base_route: system.admin_content
+  weight: 10
+entity.gas_stations_provincias_type.edit_form:
+  title: 'Edit'
+  route_name: entity.gas_stations_provincias_type.edit_form
+  base_route: entity.gas_stations_provincias_type.edit_form
+entity.gas_stations_provincias_type.collection:
+  title: 'List'
+  route_name: entity.gas_stations_provincias_type.collection
+  base_route: entity.gas_stations_provincias_type.collection
+
+entity.gas_stations_municipios.settings:
+  title: 'Settings'
+  route_name: entity.gas_stations_municipios.settings
+  base_route: entity.gas_stations_municipios.settings
+entity.gas_stations_municipios.collection:
+  title: 'gas_stations_municipioss'
+  route_name: entity.gas_stations_municipios.collection
+  base_route: system.admin_content
+  weight: 10

@@ -4,6 +4,7 @@ namespace Drupal\gas_stations;
 
 use Drupal\Component\Serialization\Json;
 use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\gas_stations\Query\GasStationsQuery;
 use GuzzleHttp\ClientInterface;
 
 class RestGasStationClientCalls {
@@ -77,6 +78,55 @@ class RestGasStationClientCalls {
     public function getProvincias(): array
     {
         return $this->getQuery('Listados/Provincias/');
+    }
+
+    public function getMunicipios(): array
+    {
+        return $this->getQuery('Listados/Municipios/');
+    }
+
+    public function getProducts(): array
+    {
+        return $this->getQuery('Listados/ProductosPetroliferos/');
+    }
+
+    public function getGasStationsList(): array
+    {
+        return $this->getQuery('Listados/EstacionesTerrestres/');
+    }
+
+    public function updateMasterData() {
+
+        $ccaa = $this->getCCAA();
+        $provincias = $this->getProvincias();
+        $municipios = $this->getMunicipios();
+
+        // Update the CCAA
+        foreach ($ccaa as $value) {
+            if (!GasStationsQuery::getGasStationsCCAAById($value['IDCCAA'])) {
+                $data = ['idccaa' => $value['IDCCAA'], 'label' => $value['CCAA']];
+                $entity_type_manager = \Drupal::entityTypeManager()->getStorage('gas_stations_ccaa')->create($data);
+                $entity_type_manager->save();
+            }
+        }
+
+        // Update the Provincias
+        foreach ($provincias as $value) {
+            if (!GasStationsQuery::getGSProvinciasById($value['IDProvincia'])) {
+                $data = ['idprovincia' => $value['IDPovincia'], 'idccaa' => $value['IDCCAA'], 'label' => $value['Provincia']];
+                $entity_type_manager = \Drupal::entityTypeManager()->getStorage('gas_stations_provincias')->create($data);
+                $entity_type_manager->save();
+            }
+        }
+
+        // Update the Provincias
+        foreach ($municipios as $value) {
+            if (!GasStationsQuery::getGSProvinciasById($value['IDMunicipio'])) {
+                $data = ['idmunicipio' => $value['IDMunicipio'], 'idprovincia' => $value['IDProvincia'], 'idccaa' => $value['IDCCAA'], 'label' => $value['Provincia']];
+                $entity_type_manager = \Drupal::entityTypeManager()->getStorage('gas_stations_municipios')->create($data);
+                $entity_type_manager->save();
+            }
+        }
     }
 
 

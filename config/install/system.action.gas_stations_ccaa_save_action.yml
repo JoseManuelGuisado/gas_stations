@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - gas_stations
+id: gas_stations_ccaa_save_action
+label: 'Save comunidades_autonomass'
+type: gas_stations_ccaa
+plugin: entity:save_action:gas_stations_ccaa
+configuration: {  }

@@ -1,0 +1,29 @@
+gas_stations.add_form:
+  title: 'Add gas_stations'
+  route_name: entity.gas_stations.add_form
+  appears_on:
+    - entity.gas_stations.collection
+
+gas_stations_comunidades_autonomas.add_form:
+  title: 'Add comunidades_autonomas'
+  route_name: entity.gas_stations_comunidades_autonomas.add_form
+  appears_on:
+    - entity.gas_stations_comunidades_autonomas.collection
+
+gas_stations_provincias.type_add:
+  title: 'Add provincias type'
+  route_name: entity.gas_stations_provincias_type.add_form
+  appears_on:
+    - entity.gas_stations_provincias_type.collection
+
+gas_stations_provincias.add_page:
+  title: 'Add provincias'
+  route_name: entity.gas_stations_provincias.add_page
+  appears_on:
+    - entity.gas_stations_provincias.collection
+
+gas_stations_municipios.add_form:
+  title: 'Add gas_stations_municipios'
+  route_name: entity.gas_stations_municipios.add_form
+  appears_on:
+    - entity.gas_stations_municipios.collection

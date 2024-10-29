@@ -4,3 +4,22 @@
  * @file
  * Primary module hooks for gas_stations module.
  */
+
+/**
+ * Implements hook_cron().
+ */
+function gas_stations_cron(): void {
+
+    $interval = 3600;
+    $limit_date = date("U", strtotime("-1 days"));
+
+    $next_execution = \Drupal::state()->get('gas_stations.next_execution', 0);
+
+    if (\Drupal::time()->getRequestTime() >= $next_execution) {
+
+
+
+
+        \Drupal::state()->set('gas_stations.next_execution', \Drupal::time()->getRequestTime() + $interval);
+    }
+}
