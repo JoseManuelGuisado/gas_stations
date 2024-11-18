@@ -83,6 +83,22 @@ final class GasStationsMunicipios extends ContentEntityBase implements GasStatio
 
     $fields = parent::baseFieldDefinitions($entity_type);
 
+    $fields['label'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Label'))
+      ->setRequired(TRUE)
+      ->setSetting('max_length', 255)
+      ->setDisplayOptions('form', [
+          'type' => 'string_textfield',
+          'weight' => -5,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayOptions('view', [
+          'label' => 'hidden',
+          'type' => 'string',
+          'weight' => -5,
+      ])
+      ->setDisplayConfigurable('view', TRUE);
+
     $fields['status'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Status'))
       ->setDefaultValue(TRUE)
@@ -129,22 +145,20 @@ final class GasStationsMunicipios extends ContentEntityBase implements GasStatio
               ]
           );
 
-      $fields['idprovincia'] = BaseFieldDefinition::create('string')
+      $fields['idprovincia'] = BaseFieldDefinition::create('integer')
           ->setLabel(t('ID Provincia'))
           ->setDescription(t('The ID Provincia.'))
           ->setDisplayOptions('form', [
-                  'type' => 'string',
-                  'weight' => 2,
+                  'type' => 'integer',
                   'label' => 'The ID Provincia',
               ]
           );
 
-      $fields['idccaa'] = BaseFieldDefinition::create('string')
+      $fields['idccaa'] = BaseFieldDefinition::create('integer')
           ->setLabel(t('ID Comunidad Autonoma'))
           ->setDescription(t('The ID Comunidad Autonoma.'))
           ->setDisplayOptions('form', [
-                  'type' => 'string',
-                  'weight' => 2,
+                  'type' => 'integer',
                   'label' => 'The ID Comunidad Autonoma',
               ]
           );

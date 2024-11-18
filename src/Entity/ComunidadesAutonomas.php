@@ -159,12 +159,11 @@ final class ComunidadesAutonomas extends ContentEntityBase implements Comunidade
       ->setLabel(t('Changed'))
       ->setDescription(t('The time that the comunidades_autonomas was last edited.'));
 
-    $fields['idccaa'] = BaseFieldDefinition::create('string')
+    $fields['idccaa'] = BaseFieldDefinition::create('integer')
         ->setLabel(t('ID Comunidad Autonoma'))
         ->setDescription(t('The ID Comunidad Autonoma.'))
         ->setDisplayOptions('form', [
-                'type' => 'string',
-                'weight' => 2,
+                'type' => 'integer',
                 'label' => 'The ID Comunidad Autonoma',
             ]
         );

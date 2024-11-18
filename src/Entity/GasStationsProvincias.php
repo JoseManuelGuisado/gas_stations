@@ -135,22 +135,20 @@ final class GasStationsProvincias extends ContentEntityBase implements Provincia
       ])
       ->setDisplayConfigurable('view', TRUE);
 
-      $fields['idprovincia'] = BaseFieldDefinition::create('string')
+      $fields['idprovincia'] = BaseFieldDefinition::create('integer')
           ->setLabel(t('ID Provincia'))
           ->setDescription(t('The ID Provincia.'))
           ->setDisplayOptions('form', [
-                  'type' => 'string',
-                  'weight' => 2,
+                  'type' => 'integer',
                   'label' => 'The ID Provincia',
               ]
           );
 
-      $fields['idccaa'] = BaseFieldDefinition::create('string')
+      $fields['idccaa'] = BaseFieldDefinition::create('integer')
           ->setLabel(t('ID Comunidad Autonoma'))
           ->setDescription(t('The ID Comunidad Autonoma.'))
           ->setDisplayOptions('form', [
-                  'type' => 'string',
-                  'weight' => 2,
+                  'type' => 'integer',
                   'label' => 'The ID Comunidad Autonoma',
               ]
           );
