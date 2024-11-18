@@ -7,13 +7,22 @@ gas_stations.client_settings:
   requirements:
     _permission: 'access content'
 
-gas_stations.get_comunidades_autonomas:
-  path: '/gas-stations/get-comunidades-autonomas'
+gas_stations.update_gs_master_data:
+  path: '/gas-stations/update-gs-master-data'
   defaults:
-    _title: 'Get comunidades autonomas'
-    _controller: '\Drupal\gas_stations\Controller\GasStationClientController::getGasStationCCAA'
+    _title: 'Update Gas Stations Master Data'
+    _controller: '\Drupal\gas_stations\Controller\GasStationClientController::updateGSMasterData'
   requirements:
     _permission: 'access content'
+
+gas_stations.update_gas_stations:
+  path: '/gas-stations/update-gas-stations'
+  defaults:
+    _title: 'Update Gas Stations'
+    _controller: '\Drupal\gas_stations\Controller\GasStationClientController::updateGasStationsData'
+  requirements:
+    _permission: 'access content'
+
 entity.gas_stations.settings:
   path: 'admin/structure/gas-stations'
   defaults:

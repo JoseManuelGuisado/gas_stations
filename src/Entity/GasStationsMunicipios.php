@@ -135,34 +135,33 @@ final class GasStationsMunicipios extends ContentEntityBase implements GasStatio
       ])
       ->setDisplayConfigurable('view', TRUE);
 
-      $fields['idmunicipio'] = BaseFieldDefinition::create('string')
-          ->setLabel(t('ID Municipio'))
-          ->setDescription(t('The ID Municipio.'))
-          ->setDisplayOptions('form', [
-                  'type' => 'string',
-                  'weight' => 20,
-                  'label' => 'The ID Municipio',
-              ]
-          );
+    $fields['idmunicipio'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('ID Municipio'))
+      ->setDescription(t('The ID Municipio.'))
+      ->setDisplayOptions('form', [
+          'type' => 'string',
+          'weight' => 20,
+          'label' => 'The ID Municipio',
+        ]
+      );
 
-      $fields['idprovincia'] = BaseFieldDefinition::create('integer')
-          ->setLabel(t('ID Provincia'))
-          ->setDescription(t('The ID Provincia.'))
-          ->setDisplayOptions('form', [
-                  'type' => 'integer',
-                  'label' => 'The ID Provincia',
-              ]
-          );
+    $fields['idprovincia'] = BaseFieldDefinition::create('integer')
+      ->setLabel(t('ID Provincia'))
+      ->setDescription(t('The ID Provincia.'))
+      ->setDisplayOptions('form', [
+          'type' => 'integer',
+          'label' => 'The ID Provincia',
+        ]
+      );
 
-      $fields['idccaa'] = BaseFieldDefinition::create('integer')
-          ->setLabel(t('ID Comunidad Autonoma'))
-          ->setDescription(t('The ID Comunidad Autonoma.'))
-          ->setDisplayOptions('form', [
-                  'type' => 'integer',
-                  'label' => 'The ID Comunidad Autonoma',
-              ]
-          );
-
+    $fields['idccaa'] = BaseFieldDefinition::create('integer')
+      ->setLabel(t('ID Comunidad Autonoma'))
+      ->setDescription(t('The ID Comunidad Autonoma.'))
+      ->setDisplayOptions('form', [
+          'type' => 'integer',
+          'label' => 'The ID Comunidad Autonoma',
+        ]
+      );
 
     $fields['uid'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Author'))

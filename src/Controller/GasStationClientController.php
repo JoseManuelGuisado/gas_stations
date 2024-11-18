@@ -32,7 +32,7 @@ class GasStationClientController extends ControllerBase implements ContainerInje
     }
 
 
-    public function getGasStationCCAA()
+    public function updateGSMasterData()
     {
 
         $a = $this->gasStationClient->updateMasterData();
@@ -41,6 +41,14 @@ class GasStationClientController extends ControllerBase implements ContainerInje
 
         return;
     }
+
+    public function updateGasStationsData() {
+      $a = $this->gasStationClient->updateGasStationData();
+      dd($a);
+      return;
+    }
+
+
 
     public static function create(ContainerInterface $container)
     {

@@ -119,6 +119,87 @@ final class GasStations extends ContentEntityBase implements GasStationsInterfac
       ])
       ->setDisplayConfigurable('view', TRUE);
 
+    $fields['description'] = BaseFieldDefinition::create('text_long')
+      ->setLabel(t('Description'))
+      ->setDisplayOptions('form', [
+        'type' => 'text_textarea',
+        'weight' => 10,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayOptions('view', [
+        'type' => 'text_default',
+        'label' => 'above',
+        'weight' => 10,
+      ])
+      ->setDisplayConfigurable('view', TRUE);
+
+    $fields['idgasstation'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('ID Gas Station'))
+      ->setDescription(t('The Gas Station ID.'))
+      ->setDisplayOptions('form', [
+          'type' => 'string',
+          'weight' => 20,
+          'label' => 'The Gas Station ID',
+        ]
+      );
+
+    $fields['idmunicipio'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('ID Municipio'))
+      ->setDescription(t('The ID Municipio.'))
+      ->setDisplayOptions('form', [
+          'type' => 'string',
+          'weight' => 20,
+          'label' => 'The ID Municipio',
+        ]
+      );
+
+    $fields['idprovincia'] = BaseFieldDefinition::create('integer')
+      ->setLabel(t('ID Provincia'))
+      ->setDescription(t('The ID Provincia.'))
+      ->setDisplayOptions('form', [
+          'type' => 'integer',
+          'label' => 'The ID Provincia',
+        ]
+      );
+
+    $fields['idccaa'] = BaseFieldDefinition::create('integer')
+      ->setLabel(t('ID Comunidad Autonoma'))
+      ->setDescription(t('The ID Comunidad Autonoma.'))
+      ->setDisplayOptions('form', [
+          'type' => 'integer',
+          'label' => 'The ID Comunidad Autonoma',
+        ]
+      );
+
+    $fields['lat'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Gas Station Latitude'))
+      ->setDescription(t('The Gas Station Latitude.'))
+      ->setDisplayOptions('form', [
+          'type' => 'varchar',
+          'size' => 12,
+          'label' => 'The Gas Station Latitude',
+        ]
+      );
+
+    $fields['long'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Gas Station Longitude'))
+      ->setDescription(t('The Gas Station Longitude.'))
+      ->setDisplayOptions('form', [
+          'type' => 'varchar',
+          'size' => 12,
+          'label' => 'The Gas Station Longitude',
+        ]
+      );
+
+    $fields['address'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Gas Station Address'))
+      ->setDescription(t('The Gas Station Address.'))
+      ->setDisplayOptions('form', [
+          'type' => 'varchar',
+          'label' => 'The Gas Station Address.',
+        ]
+      );
+
     $fields['uid'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Author'))
       ->setSetting('target_type', 'user')
