@@ -7,8 +7,7 @@ use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\gas_stations\RestGasStationClientCalls;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Drupal\Core\Messenger\MessengerTrait;
-use Drupal\Core\StringTranslation\StringTranslationTrait;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 
 class GasStationClientController extends ControllerBase implements ContainerInjectionInterface
@@ -48,6 +47,10 @@ class GasStationClientController extends ControllerBase implements ContainerInje
       return;
     }
 
+    public function getGasStationsByMunicipios(int $idMunicipio) {
+      $data = $this->gasStationClient->getGasStationsByMunicipio($idMunicipio);
+      return new JsonResponse($data);
+    }
 
 
     public static function create(ContainerInterface $container)

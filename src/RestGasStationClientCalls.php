@@ -97,6 +97,13 @@ class RestGasStationClientCalls {
     return $data['ListaEESSPrecio'];
   }
 
+  public function getGasStationsByMunicipio($id_municipio): array
+  {
+    $data = $this->getQuery('EstacionesTerrestres/FiltroMunicipio/' . $id_municipio );
+
+    return $data['ListaEESSPrecio'];
+}
+
   public function updateMasterData() {
 
     $ccaa = $this->getCCAA();
@@ -164,7 +171,4 @@ class RestGasStationClientCalls {
       }
     }
   }
-
-
-
 }

@@ -5,6 +5,25 @@
  * Primary module hooks for gas_stations module.
  */
 
+
+/**
+ * Implements hook_theme().
+ */
+function gas_stations_theme(): array {
+  return [
+    'gas_stations_block' => [
+      'variables' => [
+        'uuid' => NULL,
+        'config' => NULL,
+        'fields' => NULL,
+        'data' => NULL,
+      ],
+      'template' => 'gas-stations-block',
+    ],
+  ];
+}
+
+
 /**
  * Implements hook_cron().
  */

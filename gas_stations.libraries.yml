@@ -1,0 +1,3 @@
+gas_stations:
+  js:
+    js/gas_stations.js: {}

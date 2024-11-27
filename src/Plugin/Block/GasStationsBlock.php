@@ -17,7 +17,22 @@ class GasStationsBlock extends BlockBase {
 
     public function build()
     {
-      $form = \Drupal::formBuilder()->getForm('Drupal\gas_stations\Form\GasStationsMultiselectForm');
-      return $form;
+      $data = [];
+
+      $data['form'] = \Drupal::formBuilder()->getForm('Drupal\gas_stations\Form\GasStationsMultiselectForm');
+
+      $build = [
+        '#theme' => 'gas_stations_block',
+        '#attached' => [
+          'library' => [
+            'gas_stations/gas_stations',
+            'core/drupal.dialog.ajax',
+          ],
+        ],
+        '#data' => $data
+      ];
+
+
+      return $build;
     }
 }

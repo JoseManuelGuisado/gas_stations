@@ -23,6 +23,14 @@ gas_stations.update_gas_stations:
   requirements:
     _permission: 'access content'
 
+gas_stations.get_gas_stations_by_municipio:
+  path: '/gas-stations/by-municipio/{idMunicipio}'
+  defaults:
+    _title: 'Gas stations by municipios'
+    _controller: '\Drupal\gas_stations\Controller\GasStationClientController::getGasStationsByMunicipios'
+  requirements:
+    _permission: 'access content'
+
 entity.gas_stations.settings:
   path: 'admin/structure/gas-stations'
   defaults:
